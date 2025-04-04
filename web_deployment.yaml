@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: mongosujitbaram/candidate-form-app:v1
+        image: sujitbaram/candidate-form-app:v1
         ports:
         - containerPort: 3000
         env:
