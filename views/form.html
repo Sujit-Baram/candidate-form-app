@@ -1,24 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Candidate Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Candidate Registration Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .form-container h1 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #333;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 16px;
+      color: #444;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 24px;
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-  <h1>Candidate Registration Form</h1>
-  <form action="/submit" method="POST">
-    <label>Name:</label><br />
-    <input type="text" name="name" required><br />
+  <div class="form-container">
+    <h1>Candidate Registration</h1>
+    <form action="/submit" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required />
 
-    <label>Mobile:</label><br />
-    <input type="text" name="mobile" required><br />
+      <label for="mobile">Mobile:</label>
+      <input type="text" name="mobile" id="mobile" required />
 
-    <label>Email:</label><br />
-    <input type="email" name="email" required><br />
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required />
 
-    <label>Current Job:</label><br />
-    <input type="text" name="currentJob" required><br /><br />
+      <label for="currentJob">Current Job:</label>
+      <input type="text" name="currentJob" id="currentJob" required />
 
-    <button type="submit">Submit</button>
-  </form>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 </body>
 </html>
